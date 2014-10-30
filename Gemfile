@@ -38,3 +38,7 @@ gem 'spring',        group: :development
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
+gem 'pry' # Breakpoints
+gem 'acts_as_api'
+gem 'rabl'
+
