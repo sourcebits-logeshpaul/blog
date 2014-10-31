@@ -3,11 +3,11 @@ class UsersController < ApplicationController
 
 	def index
 		@users = User.all
-		binding.pry
+		# binding.pry
 		@test = 8
 		# render json: @users.to_json
 		# render_for_api :first, :json => @users, :root => :users 
-		#binding.pry
+		# binding.pry
 	end
 
 	def create
@@ -17,14 +17,14 @@ class UsersController < ApplicationController
 	end
 
 	def show
-		#users/:id
+		# users/:id
 		# binding.pry
 		user = User.find(params[:id])
 		render_for_api :first, :json => user, :root => :user
 	end
 
 	def update
-		#params[:user] = {first_name: "", last_name: ""}
+		# params[:user] = {first_name: "", last_name: ""}
 		user = User.find(params[:id])
 		user.update_attributes(user_params)
 		render_for_api :first, :json => user, :root => :user
